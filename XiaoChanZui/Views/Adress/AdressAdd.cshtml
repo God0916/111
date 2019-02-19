@@ -1,0 +1,65 @@
+﻿@model XiaoChanZui.Models.Addresses
+
+@{
+    ViewBag.Title = "AdressAdd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/dist/distpicker.data.min.js"></script>
+<script src="~/dist/distpicker.min.js"></script>
+<h2>添加收货地址</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            @Html.Label("收货人", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Consignse, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Consignse, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.Label("收货地址", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div data-toggle="distpicker">
+                    <div class="form-group">
+                        <select class="" name="Sheng" id="province2" data-province="---- 选择省 ----"></select>
+                        <select class="" name="Shi" id="city2" data-city="---- 选择市 ----"></select>
+                        <select class="" name="Qu" id="district2" data-district="---- 选择区 ----"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("详细地址", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DetailAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.DetailAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("收货电话号", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="保存" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
