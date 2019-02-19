@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Routing;
-using System.Web.Optimization;
 
 namespace XiaoChanZui.Controllers
 {
-    public class Demo01Controller : Controller
+    public class AdressController : Controller
     {
-        // GET: Demo01
+        // GET: Adress
         public ActionResult Index()
         {
             return View();
