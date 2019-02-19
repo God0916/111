@@ -170,6 +170,10 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\skdslider.css" />
     <Content Include="css\style.css" />
+    <Content Include="dist\distpicker.data.js" />
+    <Content Include="dist\distpicker.data.min.js" />
+    <Content Include="dist\distpicker.js" />
+    <Content Include="dist\distpicker.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -261,8 +265,11 @@
     <Content Include="images\t4.jpg" />
     <Content Include="images\tick.png" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\distpicker.data.js" />
+    <Content Include="js\distpicker.js" />
     <Content Include="js\easing.js" />
     <Content Include="js\jquery-1.11.1.min.js" />
+    <Content Include="js\main.js" />
     <Content Include="js\minicart.min.js" />
     <Content Include="js\move-top.js" />
     <Content Include="js\responsiveslides.min.js" />
@@ -288,6 +295,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="src\distpicker.data.js" />
+    <Content Include="src\distpicker.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -304,10 +313,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Users\Register.cshtml" />
     <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Adress\AdressAdd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Adress\" />
     <Folder Include="Views\Orders\" />
   </ItemGroup>
   <ItemGroup>
