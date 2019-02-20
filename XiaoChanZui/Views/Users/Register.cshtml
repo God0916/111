@@ -18,15 +18,16 @@
         <div class="login-form-grids">
             <h6>注册</h6>
             <form action="#" method="post">
-                <input type="email" placeholder="账号" required=" " name="UserName">
-                <input type="password" placeholder="密码" required=" " name="UserPwd">
-                <input type="text" placeholder="手机号" required=" " name="phone">
+                <input type="text" placeholder="账号" required="" name="UserName">
+                <input type="password" placeholder="密码" required="" name="UserPwd">
+                <div style="margin-top:14px"></div>
+                <input type="text" placeholder="手机号" required="" name="Phone">
                 <div class="register-check-box">
                     <div class="check">
-                        <label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>我接受这些条款和条件</label>
+                        <label class="checkbox"><input type="checkbox" id="checkbox" ><i> </i>我接受这些条款和条件</label>
                     </div>
                 </div>
-                <input type="submit" value="注册">
+                <input id="zc" type="submit" value="注册" disabled="disabled">
             </form>
         </div>
         <div class="register-home">
@@ -35,3 +36,14 @@
     </div>
 </div>
 <!-- //register -->
+<script>
+    $('#checkbox').change(function () {
+        if ($('#checkbox').prop('checked', true)) {
+            $('#zc').attr('disabled', false);
+        }
+        else {
+            $('#zc').attr('disabled', true);
+            alert("需要接受条件");
+        }
+    })  
+</script>
